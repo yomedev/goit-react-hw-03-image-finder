@@ -24,11 +24,15 @@ export const App = () => {
 
   useEffect(() => {
     fetchImages()
-  }, [page, searchQuery])
+  }, [page, searchQuery, fetchImages])
 
   const updateSearchQuery = query => {
     setSearchQuery(query)
     setPage(1)
+  }
+
+  if (imagesError) {
+    return <h1>Something went wrong</h1>
   }
 
   return (
