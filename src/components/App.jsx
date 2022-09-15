@@ -22,9 +22,11 @@ export const App = () => {
     setCanChangePage(totalImages > page * 12)
   })
 
+  /* eslint-disable */
   useEffect(() => {
     fetchImages()
   }, [page, searchQuery])
+  /* eslint-enable */
 
   const updateSearchQuery = query => {
     setSearchQuery(query)

@@ -12,7 +12,7 @@ const Modal = ({ url, closeModal }) => {
     }
     document.addEventListener('keydown', handleKeydown)
     return () => document.removeEventListener('keydown', handleKeydown)
-  }, [])
+  }, [closeModal])
 
   return (
     <div onClick={() => closeModal()} className="Overlay">
