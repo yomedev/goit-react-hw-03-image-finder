@@ -24,7 +24,7 @@ export const App = () => {
 
   useEffect(() => {
     fetchImages()
-  }, [page, searchQuery, fetchImages])
+  }, [page, searchQuery])
 
   const updateSearchQuery = query => {
     setSearchQuery(query)
